@@ -7,7 +7,7 @@ Usage
 =====
 
     brew tap mpv-player/mpv
-    brew install --HEAD mpv-player/mpv/libass-ct
     brew tap xylosper/cmplayer
+    brew install --HEAD mpv-player/mpv/libass-ct
     brew install cmplayer
     
