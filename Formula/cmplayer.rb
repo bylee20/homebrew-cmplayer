@@ -23,7 +23,6 @@ class Cmplayer < Formula
     system "./build-mpv"
     system "make", "cmplayer"
     cp_r "./build/CMPlayer.app", prefix
-    ln_s "#{prefix}/CMPlayer.app", "/Applications"
   end
 
   def caveats; <<-EOS.undent
