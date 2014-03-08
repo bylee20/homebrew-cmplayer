@@ -2,9 +2,9 @@ require "formula"
 
 class Cmplayer < Formula
   homepage "http://cmplayer.github.io"
-  version "0.8.10"
+  version "0.8.12"
   url "https://github.com/xylosper/cmplayer/releases/download/v#{version}/cmplayer-#{version}-source.tar.gz"
-  sha1 "42b8f2883f155f6b9d0259aba97c2c67001f6041"
+  sha1 "d45fad924bf555585eb378bd7c23545636c8d23f"
 
   depends_on :xcode => :build
   depends_on 'pkg-config' => :build
@@ -19,9 +19,8 @@ class Cmplayer < Formula
   depends_on "qt5"
 
   def install
-    system "sed -i '' 's/icu-uc$/icu-uc libchardet/' src/cmplayer/cmplayer.pro"
-    system "./build-mpv"
-    system "make", "cmplayer"
+    system "./configure", "--enable-quvi4", "--qmake=qmake", "--macdeployqt=macdeployqt"
+    system "make"
     cp_r "./build/CMPlayer.app", prefix
   end
 
