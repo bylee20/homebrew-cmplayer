@@ -2,9 +2,9 @@ require "formula"
 
 class Cmplayer < Formula
   homepage "http://cmplayer.github.io"
-  version "0.8.12"
+  version "0.8.13"
   url "https://github.com/xylosper/cmplayer/releases/download/v#{version}/cmplayer-#{version}-source.tar.gz"
-  sha1 "d45fad924bf555585eb378bd7c23545636c8d23f"
+  sha1 "d44f816db1c2ee8f0a20a6bec47c2b4fc0045087"
 
   depends_on :xcode => :build
   depends_on 'pkg-config' => :build
@@ -12,6 +12,7 @@ class Cmplayer < Formula
   depends_on 'xylosper/cmplayer/libchardet'
   depends_on "libdvdread"
   depends_on "libdvdnav"
+  depends_on "libbluray"
   depends_on "libquvi"
   depends_on "mpg123"
   depends_on "icu4c"
