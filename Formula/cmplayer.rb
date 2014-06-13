@@ -2,9 +2,9 @@ require "formula"
 
 class Cmplayer < Formula
   homepage "http://cmplayer.github.io"
-  version "0.8.13"
+  version "0.8.14"
   url "https://github.com/xylosper/cmplayer/releases/download/v#{version}/cmplayer-#{version}-source.tar.gz"
-  sha1 "d44f816db1c2ee8f0a20a6bec47c2b4fc0045087"
+  sha1 "37a1c94e397b686627eeb0fdd78d0799b0d5379c"
 
   depends_on :xcode => :build
   depends_on 'pkg-config' => :build
